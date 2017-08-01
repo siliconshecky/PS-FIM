@@ -19,6 +19,6 @@ if ($compare -eq "Y")
     {$baseline = Read-host -Prompt 'Path and name of baseline file'
     $basefile = Import-csv -path $baseline
     $newfile = Import-csv -path $output
-    Compare-Object $basefile $newfile -Property Hash, Path, Algorithm -IncludeEqual
+    Compare-Object $basefile $newfile -Property Hash, Path, Algorithm
     }
 write-host 'Have a nice day'
