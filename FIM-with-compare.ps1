@@ -14,7 +14,7 @@ foreach ($file in $files){
  
    }
 
-$compare = read-host -Prompt 'Do you want to compare hashes with a baseline (Y/N)'
+$compare = read-host -Prompt 'Do you want to compare hashes with a baseline (Y/N)' -ErrorAction stop
 if ($compare -eq "Y")
     {$baseline = Read-host -Prompt 'Path and name of baseline file'
     Compare-Object $baseline $output -IncludeEqual
